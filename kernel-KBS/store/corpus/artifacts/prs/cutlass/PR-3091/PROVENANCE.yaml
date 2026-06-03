@@ -1,0 +1,24 @@
+origin_url: https://github.com/NVIDIA/cutlass/pull/3091
+upstream_repo: NVIDIA/cutlass
+upstream_sha: 982748aa
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-cutlass-3091
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 833e49b73d8a2e533d90fccc0e509354b16c9795bde88ff4d02c00f173507076
+- local_path: key-files/examples/python/CuTeDSL/hopper/grouped_gemm.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/hopper/grouped_gemm.py
+  sha256: 215158805137f6944ea470228468f3a9b0679f6abbcfafec08fb106bf71a258e
+- local_path: key-files/python/CuTeDSL/cutlass/utils/tensormap_manager.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: python/CuTeDSL/cutlass/utils/tensormap_manager.py
+  sha256: bc4b30572f026a0850d2c9fb0c8460c0069742531f1def6b58db1e0c41349542

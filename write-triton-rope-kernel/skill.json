@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-triton-rope-kernel",
+  "name": "Write Triton RoPE Kernel",
+  "category": "inference",
+  "summary": "Implement a Triton kernel that applies Rotary Position Embeddings to Q and K tensors — covers GPT-NeoX vs GPT-J layouts, continuous-batching position handling, and fp32 cos/sin tables.",
+  "tags": ["triton", "rope", "rotary-embeddings", "attention", "position-encoding", "llama", "inference", "gpu-kernels"],
+  "difficulty": "intermediate",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-triton-rope-kernel/SKILL.md"
+}

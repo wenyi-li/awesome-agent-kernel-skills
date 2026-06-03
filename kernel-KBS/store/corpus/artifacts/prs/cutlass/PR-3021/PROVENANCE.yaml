@@ -1,0 +1,19 @@
+origin_url: https://github.com/NVIDIA/cutlass/pull/3021
+upstream_repo: NVIDIA/cutlass
+upstream_sha: 5c42d0f2
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-cutlass-3021
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 63cefff197379102264be451bda078b1bdb802e5b7ebb28295ec5e45e3aee3a2
+- local_path: key-files/python/CuTeDSL/cutlass/cute/arch/clc.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: python/CuTeDSL/cutlass/cute/arch/clc.py
+  sha256: 638dcd76030cb475d0be689ac73ac9d9ed5223bc45b03d83e752a44d468da857

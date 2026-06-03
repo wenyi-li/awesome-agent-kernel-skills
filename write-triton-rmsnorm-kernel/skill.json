@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-triton-rmsnorm-kernel",
+  "name": "Write Triton RMSNorm Kernel",
+  "category": "inference",
+  "summary": "Implement RMSNorm in Triton — one-pass sum-of-squares with fp32 accumulation, persistent kernel for typical LLM hidden sizes, and forward + backward correctness for LLaMA-family models.",
+  "tags": ["triton", "rmsnorm", "normalization", "llama", "inference", "fp32-accumulation", "gpu-kernels"],
+  "difficulty": "intermediate",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-triton-rmsnorm-kernel/SKILL.md"
+}

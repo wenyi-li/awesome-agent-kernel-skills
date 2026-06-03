@@ -1,0 +1,19 @@
+origin_url: https://github.com/NVIDIA/cutlass/pull/2492
+upstream_repo: NVIDIA/cutlass
+upstream_sha: 84a27b39
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-cutlass-2492
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 57547478203f7fbc100d1df96a0f1bcae79591716c31af5acf838e8c1ec40f2f
+- local_path: key-files/examples/cute/tutorial/blackwell/04_mma_tma_2sm_sm100.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/cute/tutorial/blackwell/04_mma_tma_2sm_sm100.cu
+  sha256: 11d0027b40b0c7c96e1bc4fcd38e248fa58e8cea257dc4527bc756094984f500

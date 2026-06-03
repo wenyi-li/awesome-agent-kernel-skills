@@ -1,0 +1,11 @@
+{
+  "built_at": "2026-05-24T08:17:47Z",
+  "counts": {
+    "active_docs": 2845,
+    "artifacts": 556,
+    "docs": 2845,
+    "tags": 22648
+  },
+  "db_path": "store/indexes/kernel_kbs.sqlite",
+  "schema_version": 3
+}

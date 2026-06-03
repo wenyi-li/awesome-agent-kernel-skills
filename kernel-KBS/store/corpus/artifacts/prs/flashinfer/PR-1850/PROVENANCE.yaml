@@ -1,0 +1,29 @@
+origin_url: https://github.com/flashinfer-ai/flashinfer/pull/1850
+upstream_repo: flashinfer-ai/flashinfer
+upstream_sha: f3ea938d
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-flashinfer-1850
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: eea4765607969743e2bdc92e1dff5357626e92600055c0e1672f1596e5011492
+- local_path: key-files/csrc/fmha_cutlass_sm100.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/fmha_cutlass_sm100.cu
+  sha256: 03c686315b8b1fcace391afa72e14b365959dedaa9900770f057c329b807188e
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_fwd_mainloop_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_fwd_mainloop_tma_warpspecialized.hpp
+  sha256: dfbcbd1fb71c7c900d50e05ba4570ac36fa2c6acc1878c21ba111d2faa72efd9
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_gen_mainloop_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_gen_mainloop_warpspecialized.hpp
+  sha256: 829524da09400927dfc86f9f2f7495b6dea4b7012dc7a0fbaf3d5df2a69774bb

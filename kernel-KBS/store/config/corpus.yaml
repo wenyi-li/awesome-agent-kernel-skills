@@ -1,0 +1,96 @@
+schema_version: 1
+name: kernel_KBS
+description: >
+  Corpus-backed GPU kernel knowledge base for CUDA, Triton, CuTe, CUTLASS,
+  and Blackwell/Hopper implementation research.
+declared_scope:
+  pr_pages_description: >
+    Merged CUDA/Triton/CuTe/CUTLASS-related PR pages from SGLang, vLLM,
+    TensorRT-LLM, PyTorch, FlashAttention, FlashInfer, CUTLASS/CuTe, CCCL,
+    Triton, DeepGEMM, ThunderKittens, TileLang, QuACK, and DeepSeek TileKernels.
+  pr_artifacts_description: >
+    diff.patch and provenance bundles for selected high-value PRs, including
+    FlashAttention SM100 MLA TopK, TensorRT-LLM Blackwell DSA/indexer, and
+    CCCL scan/memory primitives when present in store/corpus/artifacts/prs/.
+  synthesis_description: >
+    KernelWiki wiki pages, blog/code-source notes, docs, contests, and the
+    SQLite metadata/CRUD/contentless-FTS store for hardware features,
+    techniques, repos, languages, and kernel types.
+layout:
+  manifest: store/config/layout.yaml
+  path_policy: Use only canonical store/docs, store/corpus/artifacts, store/indexes, and structured store/state paths.
+  canonical_docs: store/docs
+layers:
+  - id: pr_pages
+    label: PR pages
+    path: store/docs/sources/prs
+    file_glob: "**/*.md"
+    query_with:
+      - "python3 scripts/kbs.py query --kind source-pr"
+      - "python3 scripts/kbs.py query --repo <repo>"
+      - "python3 scripts/kbs.py get <pr-page-id>"
+  - id: pr_artifacts
+    label: PR artifacts
+    path: store/corpus/artifacts/prs
+    file_glob: "**/{diff.patch,PROVENANCE.yaml}"
+    query_with:
+      - "python3 scripts/kbs.py query --has-code"
+      - "python3 scripts/kbs.py get <pr-page-id> --include-code"
+      - "python3 scripts/kbs.py get <pr-page-id> --json"
+  - id: synthesis
+    label: Synthesis
+    paths:
+      - store/docs/wiki
+      - store/docs/sources/blogs
+      - store/docs/sources/docs
+      - store/docs/sources/contests
+      - store/indexes/kernel_kbs.sqlite
+    file_glob: "**/*.md"
+    query_with:
+      - "python3 scripts/kbs.py query --kind wiki-kernel"
+      - "python3 scripts/kbs.py query --tag <tag>"
+      - "python3 scripts/kbs.py get <wiki-page-id> --follow-sources"
+      - "python3 scripts/kbs.py schema"
+  - id: vocabulary
+    label: Vocabulary, schemas, and governance state
+    paths:
+      - store/config
+      - store/schemas
+      - store/docs/ledgers
+      - store/state/refresh
+      - store/state/versions
+      - store/state/audits
+    file_glob: "*.yaml"
+    query_with:
+      - "read store/schemas/tags.yaml"
+      - "read store/schemas/aliases.yaml"
+      - "read store/config/layout.yaml"
+      - "read references/schema.md"
+  - id: state
+    label: Structured maintenance state
+    paths:
+      - store/state/refresh
+      - store/state/versions
+      - store/state/audits/content
+      - store/state/audits/refresh
+      - store/state/audits/validation
+    file_glob: "**/*.{yaml,md}"
+    query_with:
+      - "read store/store.md"
+      - "python3 scripts/kbs.py check all"
+interfaces:
+  unified: scripts/kbs.py
+  sqlite_store: store/indexes/kernel_kbs.sqlite
+  metadata_search: "scripts/kbs.py query"
+  page_fetch: "scripts/kbs.py get"
+  schema_docs: "scripts/kbs.py schema"
+  health_check: "scripts/kbs.py doctor"
+  maintenance: "scripts/kbs.py optimize"
+  governance_checks: "scripts/kbs.py check"
+  pr_update: scripts/update_pr_corpus.py
+  validation: scripts/validate.py
+answer_rules:
+  - Cite ids and relative paths.
+  - Follow sources and artifacts for evidence.
+  - Preserve confidence labels and caveat inferred or experimental claims.
+  - Do not run correctness, profiling, or benchmark workflows from this skill.

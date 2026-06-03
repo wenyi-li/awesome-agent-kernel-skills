@@ -1,0 +1,19 @@
+slug: deepgemm
+origin_url: https://github.com/deepseek-ai/DeepGEMM
+code_present: true
+total_blocks: 3
+generated_by: scripts/extract_blog_code.py
+files:
+- local_path: code/01-nc-128-cuda-core-promotion-hopper-sm90.cpp
+  heading_path: '## Key Code > ### Nc=128 CUDA-core promotion (Hopper SM90)'
+  fence_lang: cpp
+  sha256: 3afa471c8275955b8683d9bb71f9e8d0e9445403ed50c83296b8025b4d2b35a0
+- local_path: code/02-sm100-path-tcgen05-mma-with-ue8m0-block-scaling.cpp
+  heading_path: "## Key Code > ### SM100 path \u2014 tcgen05.mma with UE8M0 block\
+    \ scaling"
+  fence_lang: cpp
+  sha256: 82b86e1c5b910eb1af621f4f6808b76227ae1267df0c026b68a576d22937d104
+- local_path: code/03-moe-grouped-gemm-launch.cpp
+  heading_path: '## Key Code > ### MoE grouped-GEMM launch'
+  fence_lang: cpp
+  sha256: 1a7c840f4470dc9a9aff0462faffbb141b3e58793e740212f29286314e203c25

@@ -1,0 +1,21 @@
+origin_url: https://tridao.me/blog/2026/flash4/
+upstream_repo: blog
+upstream_sha: none
+license: inherits-from-source-blog
+retrieved_at: 2026-04-27
+asset_mode: extracted
+generated_by: scripts/extract_blog_code.py
+size_cap_truncated: false
+files:
+- local_path: 01-software-exp-cody-waite-horner.cu
+  role: extracted-block
+  mode: extracted
+  upstream_path: inline-in-blog-markdown
+  heading_path: '## Key Code > ### Software exp (Cody-Waite + Horner)'
+  sha256: 6b8c4c32f09e68c97f05abf685b9c523787a1683541cc78dcf970fad35b4b07b
+- local_path: 02-2-cta-cooperative-backward.cu
+  role: extracted-block
+  mode: extracted
+  upstream_path: inline-in-blog-markdown
+  heading_path: '## Key Code > ### 2-CTA cooperative backward'
+  sha256: 66b7eafe5eff33913dd071ff16465b52ab6db143450140bbb72ff4d68a8334c9

@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-triton-dequant-kernel",
+  "name": "Write Triton Dequant Kernel (int4/int8 → fp16/bf16)",
+  "category": "inference",
+  "summary": "Implement a Triton dequantization kernel for AWQ/GPTQ/NF4/int8 weight schemes — bit-unpacking, per-group scale/zero arithmetic, and explicit guidance on when to fuse into a matmul instead.",
+  "tags": ["triton", "dequantization", "int4", "int8", "awq", "gptq", "nf4", "weight-quantization", "inference", "gpu-kernels"],
+  "difficulty": "advanced",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-triton-dequant-kernel/SKILL.md"
+}

@@ -1,0 +1,65 @@
+schema_version: 1
+description: >
+  Canonical on-disk layout for kernel_KBS. The skill root stays small:
+  SKILL.md, scripts/, references/, and store/. Docs/config/index/state
+  data lives under store/ as the KBS persist directory.
+
+canonical_paths:
+  store: store
+  config: store/config
+  schemas: store/schemas
+  docs: store/docs
+  raw_sources: store/docs/sources
+  pr_pages: store/docs/sources/prs
+  source_notes:
+    blogs: store/docs/sources/blogs
+    docs: store/docs/sources/docs
+    contests: store/docs/sources/contests
+  artifacts: store/corpus/artifacts
+  pr_artifacts: store/corpus/artifacts/prs
+  ledgers: store/docs/ledgers
+  candidate_ledgers: store/docs/ledgers/candidates
+  wiki: store/docs/wiki
+  indexes: store/indexes
+  sqlite_index: store/indexes/kernel_kbs.sqlite
+  sqlite_manifest: store/indexes/kernel_kbs_manifest.json
+  state: store/state
+  audits: store/state/audits
+  state_refresh: store/state/refresh
+  state_versions: store/state/versions
+  audit_content: store/state/audits/content
+  audit_refresh: store/state/audits/refresh
+  audit_validation: store/state/audits/validation
+  references: references
+  scripts: scripts
+
+logical_layers:
+  ingestion:
+    purpose: Source Markdown plus provenance bundles.
+    paths:
+      - store/docs/sources
+      - store/corpus/artifacts
+  knowledge:
+    purpose: Curated synthesis pages used for answer generation.
+    paths:
+      - store/docs/wiki
+  retrieval:
+    purpose: SQLite metadata/CRUD/contentless-FTS store and schema metadata.
+    paths:
+      - store/indexes/kernel_kbs.sqlite
+  governance:
+    purpose: Schemas, controlled vocabulary, source ledgers, refresh state, and audits.
+    paths:
+      - store/config
+      - store/schemas
+      - store/docs/ledgers
+      - store/state/refresh
+      - store/state/versions
+      - store/state/audits
+
+path_policy:
+  status: canonical-only
+  note: >
+    Active scripts and documents use store/docs/... for Markdown documents,
+    store/corpus/artifacts/... for artifact files, store/indexes/... for
+    SQLite, and structured store/state/... paths for maintenance state.

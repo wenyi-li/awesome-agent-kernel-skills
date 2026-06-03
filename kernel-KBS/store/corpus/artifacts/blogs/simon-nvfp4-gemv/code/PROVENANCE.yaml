@@ -1,0 +1,30 @@
+origin_url: https://veitner.bearblog.dev/nvfp4-gemv/
+upstream_repo: blog
+upstream_sha: none
+license: inherits-from-source-blog
+retrieved_at: 2026-04-17
+asset_mode: extracted
+generated_by: scripts/extract_blog_code.py
+size_cap_truncated: false
+files:
+- local_path: 01-reference-core-computation-part-1.cpp
+  role: extracted-block
+  mode: extracted
+  upstream_path: inline-in-blog-markdown
+  heading_path: '# NVFP4 GEMV and Improved NVFP4 GEMV (Simon Veitner) > ## Key Code
+    > ### Reference core computation (Part 1)'
+  sha256: 62543aadc50663afba2585ab45910b80ac9ece99ef55fa98bd381a12263f9a89
+- local_path: 02-strategy-1-k-parallel-grid-with-atomic-accumulation.cpp
+  role: extracted-block
+  mode: extracted
+  upstream_path: inline-in-blog-markdown
+  heading_path: "# NVFP4 GEMV and Improved NVFP4 GEMV (Simon Veitner) > ## Key Code\
+    \ > ### Strategy 1 \u2014 K-parallel grid with atomic accumulation"
+  sha256: 5b5672e3efc0853b283b379164fc9f2ca60c44785d06b701081ccb2f971857ae
+- local_path: 03-strategy-3-atomic-free-shared-memory-reduction.cpp
+  role: extracted-block
+  mode: extracted
+  upstream_path: inline-in-blog-markdown
+  heading_path: "# NVFP4 GEMV and Improved NVFP4 GEMV (Simon Veitner) > ## Key Code\
+    \ > ### Strategy 3 \u2014 Atomic-free shared-memory reduction"
+  sha256: 457f7cf6bf77eca87f8a3d668e79400451ed325dd1c003133a8c34c8747fba0f

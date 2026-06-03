@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-tensorrt-plugin-integration-plan",
+  "name": "Write TensorRT Plugin Integration Plan",
+  "category": "inference",
+  "summary": "Plan a TensorRT plugin wrapping a custom CUDA kernel — IPluginV3 vs IPluginV2 choice, plugin lifecycle, dynamic shapes, serialization, FP16/INT8/FP8 handling, and CUDA-graph-safe enqueue.",
+  "tags": ["tensorrt", "plugin", "integration", "deployment", "iplugin-v3", "dynamic-shapes", "cuda-graphs", "planning", "inference"],
+  "difficulty": "advanced",
+  "hardware": ["nvidia"],
+  "languages": ["cuda", "cpp", "python"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-tensorrt-plugin-integration-plan/SKILL.md"
+}

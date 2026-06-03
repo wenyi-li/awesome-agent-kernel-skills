@@ -1,0 +1,132 @@
+origin_url: https://github.com/flashinfer-ai/flashinfer/pull/1039
+upstream_repo: flashinfer-ai/flashinfer
+upstream_sha: 9a05c92a
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-flashinfer-1039
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 86d12fd69cc98ab7d94b01fe57abb30c313b9b6668f456fc62f9f3706f285edc
+- local_path: key-files/csrc/fmha_cutlass_sm100.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/fmha_cutlass_sm100.cu
+  sha256: 2bc1f62dc8996f0ab19065d8cc31522955a94abe62c6082251d5b6a076677082
+- local_path: key-files/csrc/fmha_cutlass_sm100_pybind.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/fmha_cutlass_sm100_pybind.cu
+  sha256: f6c631824f6c3d31afd48415db605e927d7d7165698561cca84bc4b2a224a280
+- local_path: key-files/flashinfer/triton/__init__.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/__init__.py
+  sha256: 905db8562ab08de70dea898bc06614cfdb126041eb6c4a2c368e455bcbff7348
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/fmha_common.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/fmha_common.hpp
+  sha256: bcb548bf86772e270f5cc83d35799e557860aaa2de821625e4727897ad8315af
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/fmha_fusion.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/fmha_fusion.hpp
+  sha256: a2d98e28b48073bd20006e63addee8eaa27c69aa6648f7fe715053adb59ea00a
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_fwd_epilogue_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_fwd_epilogue_tma_warpspecialized.hpp
+  sha256: 66830c1c2afd6d134e48ce66eb9096de4decfc7064251392ba4a9dd3183778d8
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_fwd_mainloop_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_fwd_mainloop_tma_warpspecialized.hpp
+  sha256: 792ac63e0aed235d3776e134f6fadeb55958414455a0e0cd6d106e7787529f0f
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_gen_epilogue_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_gen_epilogue_warpspecialized.hpp
+  sha256: 2368ed84e4ee7055c955c679be1720439a5beb6a152b7c730101d207cba6981c
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_gen_mainloop_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_gen_mainloop_warpspecialized.hpp
+  sha256: 8d15c6a6c418b211bbe642a1f83df20ad090a690255a09080df478bc986f066d
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_load_cpasync_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_load_cpasync_warpspecialized.hpp
+  sha256: aceef621777dd5b8d37c545291fbb6d0a3c229d798ae70ff1bf4fb62b4e81687
+- local_path: key-files/include/flashinfer/attention/blackwell/collective/sm100_fmha_load_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/collective/sm100_fmha_load_tma_warpspecialized.hpp
+  sha256: e7f49c15bcf62842a7b66f60b5d1708a5403ef36d25f360a235a5cae2ff05b8d
+- local_path: key-files/include/flashinfer/attention/blackwell/common/pow_2.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/common/pow_2.hpp
+  sha256: a90bdb34e36ba546d8bf91d25514f203f7eba497b3f482476f9178afb6285bf4
+- local_path: key-files/include/flashinfer/attention/blackwell/device/fmha.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/device/fmha.hpp
+  sha256: 17647616f1a175ad37a7dcd4b44fe8dfb729265b359e0cda49b12d20057ff5fa
+- local_path: key-files/include/flashinfer/attention/blackwell/device/sm100_mla.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/device/sm100_mla.hpp
+  sha256: 569f1ffd11d9a264635a0ac03108980470089c8a6efff4c06e13911608a67483
+- local_path: key-files/include/flashinfer/attention/blackwell/fmha_cutlass_sm100.cuh
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/fmha_cutlass_sm100.cuh
+  sha256: 5f7280944b8b72211c89f17ca0e08713557d9c181877304959d5d3f067cce346
+- local_path: key-files/include/flashinfer/attention/blackwell/kernel/fmha_options.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/kernel/fmha_options.hpp
+  sha256: bcfc6809b04ed7e9fafc01182af562611d801e43070092691a3ceeb40094e762
+- local_path: key-files/include/flashinfer/attention/blackwell/kernel/fmha_tile_scheduler.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/kernel/fmha_tile_scheduler.hpp
+  sha256: 73bb1e816819e1ead7c7450958fe1514f56b3edf669b0d579366a3a16a35c8ae
+- local_path: key-files/include/flashinfer/attention/blackwell/kernel/sm100_fmha_fwd_kernel_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/kernel/sm100_fmha_fwd_kernel_tma_warpspecialized.hpp
+  sha256: 0ef25bff9821f0ddf32f796d21462eefd82c197594eda698e51c2fe28e661092
+- local_path: key-files/include/flashinfer/attention/blackwell/kernel/sm100_fmha_gen_kernel_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/kernel/sm100_fmha_gen_kernel_warpspecialized.hpp
+  sha256: efc3bb326ae09b1773ef0ebc8fa78be6acef63c9d78626de0c44e62269234777
+- local_path: key-files/include/flashinfer/attention/blackwell/kernel/sm100_fmha_mla_reduction.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/kernel/sm100_fmha_mla_reduction.hpp
+  sha256: 3575f26894ed94305baaccaa53102dd3be7b2c7f5b0fcb5f24eb1857dbdbe523
+- local_path: key-files/include/flashinfer/attention/blackwell/kernel/sm100_fmha_mla_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/kernel/sm100_fmha_mla_tma_warpspecialized.hpp
+  sha256: f35738f40c9092df2ad10c54bd1c51e56165323298713e102995a4cbb29d35ea
+- local_path: key-files/include/flashinfer/attention/blackwell/kernel/sm100_mla_tile_scheduler.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: include/flashinfer/attention/blackwell/kernel/sm100_mla_tile_scheduler.hpp
+  sha256: e1db9b47e7326ba0cc9579a1f51c80596ca220030211e28647138ddfbf97365e
+- local_path: key-files/flashinfer/triton/format_conversion.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/format_conversion.py
+  upstream_sha: 71002782fe1b63fd091c6178929258be8d885dd1
+  sha256: 5e41c1a495a4b523654264c5a74ab17544118f4ba1cc25cc3c0f9e294b6f5fff
+  captured_at_base_sha_note: PR-1039 deletes this file. Captured verbatim at the PR's
+    base SHA (pre-merge) so users can inspect the pre-deletion state locally.

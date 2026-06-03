@@ -1,0 +1,14 @@
+slug: flash-attention-4
+origin_url: https://tridao.me/blog/2026/flash4/
+code_present: true
+total_blocks: 2
+generated_by: scripts/extract_blog_code.py
+files:
+- local_path: code/01-software-exp-cody-waite-horner.cu
+  heading_path: '## Key Code > ### Software exp (Cody-Waite + Horner)'
+  fence_lang: cuda
+  sha256: 6b8c4c32f09e68c97f05abf685b9c523787a1683541cc78dcf970fad35b4b07b
+- local_path: code/02-2-cta-cooperative-backward.cu
+  heading_path: '## Key Code > ### 2-CTA cooperative backward'
+  fence_lang: cuda
+  sha256: 66b7eafe5eff33913dd071ff16465b52ab6db143450140bbb72ff4d68a8334c9

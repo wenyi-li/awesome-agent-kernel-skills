@@ -1,0 +1,44 @@
+origin_url: https://github.com/vllm-project/vllm/pull/16032
+upstream_repo: vllm-project/vllm
+upstream_sha: ed7a29d9
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-vllm-16032
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: dc3dd3d4b83711194203057a0f85a269d812209b3f796ef3e08eaafe1d6312da
+- local_path: key-files/csrc/attention/mla/cutlass_mla_entry.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/attention/mla/cutlass_mla_entry.cu
+  sha256: 1bfa0651a2f3e22e2b2d8022c16f732a432ebb7af117415e8a8263d98c1d3afd
+- local_path: key-files/csrc/attention/mla/cutlass_mla_kernels.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/attention/mla/cutlass_mla_kernels.cu
+  sha256: 128bab1b82d9e3d01fa8bd71fa0ba46e5c763e3d3a55c164ee9811193ddc264d
+- local_path: key-files/csrc/ops.h
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/ops.h
+  sha256: 79d9e5f26dd1f9ca3c948250cf228ac98bb851f6b98f289dd3ab03f7847949e4
+- local_path: key-files/csrc/quantization/fp4/nvfp4_scaled_mm_kernels.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/quantization/fp4/nvfp4_scaled_mm_kernels.cu
+  sha256: e8aed5ccb3dd9de26c3aeff159a242a46dcb7c7d8d0351b6c44ff1f8d2f7effa
+- local_path: key-files/csrc/torch_bindings.cpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: csrc/torch_bindings.cpp
+  sha256: 295e2ae15599d0880bdcc7b2b0d77d979d7386544e904ba6e389a391b60eec05
+- local_path: key-files/vllm/_custom_ops.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: vllm/_custom_ops.py
+  sha256: 9d27e25ef6dcf891c98a18505b83a42c9ab7532ef861a20bccfd9e07746144b2

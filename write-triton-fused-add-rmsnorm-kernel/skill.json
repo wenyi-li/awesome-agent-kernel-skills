@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-triton-fused-add-rmsnorm-kernel",
+  "name": "Write Triton Fused Add+RMSNorm Kernel",
+  "category": "inference",
+  "summary": "Implement a fused residual-add + RMSNorm Triton kernel — one memory pass for both ops, with the summed residual written back for the next transformer block's input.",
+  "tags": ["triton", "rmsnorm", "fusion", "residual", "llama", "normalization", "inference", "gpu-kernels"],
+  "difficulty": "intermediate",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-triton-fused-add-rmsnorm-kernel/SKILL.md"
+}

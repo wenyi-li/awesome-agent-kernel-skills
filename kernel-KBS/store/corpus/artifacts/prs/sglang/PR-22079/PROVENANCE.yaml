@@ -1,0 +1,19 @@
+origin_url: https://github.com/sgl-project/sglang/pull/22079
+upstream_repo: sgl-project/sglang
+upstream_sha: 5638d40f
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-sglang-22079
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 7e67fdc7e26abbe1eba72b85f7b425f00c4c0ee9b98d3ddca6d9b963142adbad
+- local_path: key-files/python/sglang/srt/layers/attention/triton_ops/extend_attention.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: python/sglang/srt/layers/attention/triton_ops/extend_attention.py
+  sha256: d27789c32e180d725ed867f4f6cd05b09a3c47bfe37794ff60e150d000573edd

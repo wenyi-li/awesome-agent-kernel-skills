@@ -1,0 +1,47 @@
+# Llama 3.1 70B Instruct — Full-node MI355X (8×gfx950), ROCm 7.2
+# Resource class: full-node
+# Docker: rocm/sgl-dev:v0.5.9-rocm720-mi35x-20260317
+
+server:
+  launch: true
+  host: 127.0.0.1
+  port: 30000
+  env:
+    HIP_VISIBLE_DEVICES: "0,1,2,3,4,5,6,7"
+    SGLANG_USE_AITER: "1"
+  base_flags:
+    model_path: /data/meta-llama/Meta-Llama-3.1-70B-Instruct
+    tp_size: 8
+    trust_remote_code: true
+    mem_fraction_static: 0.85
+  search_space:
+    mem_fraction_static: [0.82, 0.85, 0.88, 0.90]
+    attention_backend: [aiter, triton]
+    chunked_prefill_size: [8192, 16384]
+    max_running_requests: [32, 64, 96]
+    schedule_policy: [lpm, fcfs]
+
+dataset:
+  kind: sharegpt
+  path: ""
+  num_prompts: 1200
+  output_len: 512
+
+benchmark:
+  backend: auto
+  tokenizer: /data/meta-llama/Meta-Llama-3.1-70B-Instruct
+  max_concurrency: [null, 8, 16]
+  extra_request_body:
+    temperature: 0.0
+  qps:
+    lower: 0.5
+    upper: 8.0
+    tolerance: 0.1
+  sla:
+    max_ttft_ms: 2000
+    max_tpot_ms: 40
+  output_dir: ./auto_benchmark_results/llama3.1-70b-mi355x
+
+search:
+  tier: 2
+  max_candidates: 20

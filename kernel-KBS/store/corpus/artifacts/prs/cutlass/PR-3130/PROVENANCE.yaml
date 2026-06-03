@@ -1,0 +1,69 @@
+origin_url: https://github.com/NVIDIA/cutlass/pull/3130
+upstream_repo: NVIDIA/cutlass
+upstream_sha: 08185b9c
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-cutlass-3130
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: a458b7eb6b118ae9ac7693a29d40a91f6bc48822d558cc9cfc434e544cc69c60
+- local_path: key-files/examples/python/CuTeDSL/blackwell/dense_blockscaled_gemm_persistent_prefetch.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/dense_blockscaled_gemm_persistent_prefetch.py
+  sha256: 288d9dbe3995208181c9e44980f67892dc1d7362360f324bcb7c1697a2f16e83
+- local_path: key-files/examples/python/CuTeDSL/blackwell/dense_gemm_persistent_prefetch.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/dense_gemm_persistent_prefetch.py
+  sha256: e167e53469c1824765cff83d96c77957a4d4f5aec2b8cb73f54f474b4d2ea6d4
+- local_path: key-files/examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_2.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_2.py
+  sha256: 21044b5fca133ce0968777d1b042da4576ded18312e61d91789e8217d6f26d2d
+- local_path: key-files/examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_3.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_3.py
+  sha256: 245afc1d258bb3e69eb04f0c1012f1af75a8c10707b9e8dd4a20f7517d74dd62
+- local_path: key-files/examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_3_1.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_3_1.py
+  sha256: 4152376b6a7b0cd74f92a974de19e40f70a9bdbfdf89565e71a7f7794d9564ca
+- local_path: key-files/examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_4.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_4.py
+  sha256: 060d4d736134bcd66a07c15a15c9cb84e14266aa65b7629d37226cbcdd0b1f94
+- local_path: key-files/examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_5.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_5.py
+  sha256: 9a32f21b7cb99c37dd0cbdeb48a6b9a12e93cab67721a65d7739cc3ed6b610f4
+- local_path: key-files/examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_6.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/tutorial_gemm/fp16_gemm_6.py
+  sha256: 8cb350408a7b163063ded5e05aa62fcb683265731c5dda59b56175f62dcf67e1
+- local_path: key-files/examples/python/CuTeDSL/distributed/distributed_all_gather_gemm_blackwell.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/distributed/distributed_all_gather_gemm_blackwell.py
+  sha256: 1965c3d123d555c0ce9bb54ac84b548fe6e9286f0c8ded68e28ee61096c564bc
+- local_path: key-files/examples/python/CuTeDSL/distributed/distributed_gemm_all_reduce_blackwell.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/distributed/distributed_gemm_all_reduce_blackwell.py
+  sha256: 845bb45d99c79dc7bb91359fcaf91f22dd4eca3c8cb055c425dec0239314cb25
+- local_path: key-files/examples/python/CuTeDSL/distributed/distributed_gemm_reduce_scatter_blackwell.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/distributed/distributed_gemm_reduce_scatter_blackwell.py
+  sha256: aa595a6ba0265b4e6c08587f4ff99ac2afa059cdc574f405c81ffdef2697fea9

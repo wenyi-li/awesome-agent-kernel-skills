@@ -1,0 +1,186 @@
+repo: deepseek-ai/DeepGEMM
+searched_at: '2026-04-27'
+keywords_used:
+- blackwell
+- sm100
+- sm_100
+- tcgen05
+- tmem
+- nvfp4
+- fp4
+- fp8
+- moe
+- block_scale
+total_candidates: 28
+included: 1
+excluded: 5
+deferred: 22
+prs:
+- number: 316
+  title: Add various optimizations and Mega MoE benchmarks
+  date: '2026-04-24'
+  decision: defer
+  reason: Mega MoE benchmark addition; needs investigation for which kernels are kernel-relevant vs pure benchmark.
+  files_changed: []
+- number: 314
+  title: 'fix: SM90 paged MQA logits IMA on next_n=4 (nv_dev rebase)'
+  date: '2026-04-22'
+  decision: exclude
+  reason: SM90-only bugfix; not Blackwell-relevant
+  files_changed: []
+- number: 304
+  title: '[Public release 26/04] Introducing Mega MoE, FP4 Indexer and other features/fixes'
+  date: '2026-04-17'
+  decision: include
+  reason: Major DeepGEMM public release with Mega MoE (FP8 x FP4 fused MoE mega-kernel) and FP4 Indexer; SM100 kernel features
+  files_changed: []
+- number: 292
+  title: Fix sync issue of TMEM alloc/dealloc
+  date: '2026-03-22'
+  decision: exclude
+  reason: Bugfix superseded by PR-293 (same title, more complete)
+  files_changed: []
+- number: 293
+  title: Fix sync issue of TMEM alloc/dealloc
+  date: '2026-03-22'
+  decision: exclude
+  reason: TMEM-relevant bugfix but small in scope; folded into PR-304's release
+  files_changed: []
+- number: 238
+  title: 'fix: k_grouped_fp8_gemm_nt_contiguous crashes with n = 768 on H100'
+  date: '2026-02-25'
+  decision: exclude
+  reason: SM90 (H100) only; not Blackwell-relevant
+  files_changed: []
+- number: 285
+  title: Fix a sync issue in SM100 MQA logits
+  date: '2026-02-03'
+  decision: exclude
+  reason: SM100 MQA bugfix superseded by later releases
+  files_changed: []
+- number: 19
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 49
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 68
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 74
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 81
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 95
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 103
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 112
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 113
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 115
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 157
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 158
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 163
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 164
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 169
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 174
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 198
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 203
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 226
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 227
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 233
+  title: ''
+  date: '2026-04-24'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []

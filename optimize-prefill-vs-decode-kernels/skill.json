@@ -1,0 +1,12 @@
+{
+  "id": "inference.optimize-prefill-vs-decode-kernels",
+  "name": "Optimize Prefill vs Decode Kernels",
+  "category": "inference",
+  "summary": "Reason about prefill (compute-bound, large M) vs decode (memory-bound, M=1) regimes — pick kernel family, tile shape, and split strategy per phase, with continuous batching and speculative decoding accounted for.",
+  "tags": ["prefill", "decode", "llm-inference", "optimization", "continuous-batching", "speculative-decoding", "kv-cache", "roofline", "inference", "gpu-kernels"],
+  "difficulty": "advanced",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton", "cuda"],
+  "version": "0.1.0",
+  "entry": "skills/inference/optimize-prefill-vs-decode-kernels/SKILL.md"
+}

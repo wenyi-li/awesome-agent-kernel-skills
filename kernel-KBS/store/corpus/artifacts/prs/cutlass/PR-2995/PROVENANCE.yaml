@@ -1,0 +1,24 @@
+origin_url: https://github.com/NVIDIA/cutlass/pull/2995
+upstream_repo: NVIDIA/cutlass
+upstream_sha: 1cfbb53a
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-cutlass-2995
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 1e762477453d9f2ff1e98ca4350f042d3f1d1c9639cead2d27171f76f432770d
+- local_path: key-files/examples/python/CuTeDSL/blackwell/dense_blockscaled_gemm_persistent.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/dense_blockscaled_gemm_persistent.py
+  sha256: e338634a01db52e6b7496b3ce24530cb42c02a2dbe1a3c6f35f616c797575ec4
+- local_path: key-files/examples/python/CuTeDSL/blackwell/dense_blockscaled_gemm_persistent_prefetch.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/python/CuTeDSL/blackwell/dense_blockscaled_gemm_persistent_prefetch.py
+  sha256: c68d4adfd5ec1baa368688f489ce2cdf99d4f29c568722e01a3e4c6a91981a74

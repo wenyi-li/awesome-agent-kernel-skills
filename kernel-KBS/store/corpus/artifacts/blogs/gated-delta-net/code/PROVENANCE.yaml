@@ -1,0 +1,21 @@
+origin_url: https://github.com/NVlabs/GatedDeltaNet
+upstream_repo: blog
+upstream_sha: none
+license: inherits-from-source-blog
+retrieved_at: 2026-04-16
+asset_mode: extracted
+generated_by: scripts/extract_blog_code.py
+size_cap_truncated: false
+files:
+- local_path: 01-chunk-parallel-prefill-reference-pytorch.py
+  role: extracted-block
+  mode: extracted
+  upstream_path: inline-in-blog-markdown
+  heading_path: '## Key Code > ### Chunk-parallel prefill reference (PyTorch)'
+  sha256: 272664df3baf688f40b5ecbb442d5613a1fbbadc54556406e7c5a685a353eaf7
+- local_path: 02-triton-decode-step-kernel-streaming.py
+  role: extracted-block
+  mode: extracted
+  upstream_path: inline-in-blog-markdown
+  heading_path: '## Key Code > ### Triton decode-step kernel (streaming)'
+  sha256: 4dfaa53415b1125834e79f3c25fd6645973bc15931509caaa26efb81ba808bd8

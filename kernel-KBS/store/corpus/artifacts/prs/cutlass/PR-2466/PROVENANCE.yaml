@@ -1,0 +1,74 @@
+origin_url: https://github.com/NVIDIA/cutlass/pull/2466
+upstream_repo: NVIDIA/cutlass
+upstream_sha: 0e026982
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-cutlass-2466
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 44ad93374e849a4900204a0e2caf5c1c679999b979a631b693698aef3fb9b595
+- local_path: key-files/examples/77_blackwell_fmha/77_blackwell_fmha.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/77_blackwell_fmha.cu
+  sha256: af4fb0a01e36334a470053741a8db1f9a28a9e05d8a751a39b1015fc6e6da07b
+- local_path: key-files/examples/77_blackwell_fmha/77_blackwell_fmha_bwd.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/77_blackwell_fmha_bwd.cu
+  sha256: df30b1de042162f57772c5e1cb34832091cd8c6712c138799940c45dd68fc24c
+- local_path: key-files/examples/77_blackwell_fmha/77_blackwell_mla.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/77_blackwell_mla.cu
+  sha256: 5ac8cb5b4131d33999ddeb059f9c4e24f7f30eb67957b14c39918e13597a4135
+- local_path: key-files/examples/77_blackwell_fmha/77_blackwell_mla_fwd.cu
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/77_blackwell_mla_fwd.cu
+  sha256: b93f4a45f75075eeeff8bfe2a98b9d209472ffc463e7b941a778972360e7766d
+- local_path: key-files/examples/77_blackwell_fmha/collective/fmha_fusion.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/collective/fmha_fusion.hpp
+  sha256: 9d1de56bfae3e223c29e1c1b8e065bb40871a9d9f7e544143df9639503092377
+- local_path: key-files/examples/77_blackwell_fmha/device/fmha_device_bwd.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/device/fmha_device_bwd.hpp
+  sha256: ddbb4bd547946f8dcb91cd541862f272f7ad7d4dd5a26290867ef6da7b89046d
+- local_path: key-files/examples/77_blackwell_fmha/device/sm100_mla.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/device/sm100_mla.hpp
+  sha256: d361d36e2b8ec579b9ca4cc8f50aabddda5395f827c8961979f5ddf30fe19ec5
+- local_path: key-files/examples/77_blackwell_fmha/kernel/sm100_fmha_bwd_kernel_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/kernel/sm100_fmha_bwd_kernel_tma_warpspecialized.hpp
+  sha256: 763973076dcc9e2c168e75fe0a0530334ef8c554c1cb1af64dd56c513ceb4cee
+- local_path: key-files/examples/77_blackwell_fmha/kernel/sm100_fmha_bwd_mla_kernel_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/kernel/sm100_fmha_bwd_mla_kernel_tma_warpspecialized.hpp
+  sha256: 2fa25bd8a10780634d897e9ac21f5fe50c72b99e5202225fad4bb9b9f343aa42
+- local_path: key-files/examples/77_blackwell_fmha/kernel/sm100_fmha_mla_reduction.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/kernel/sm100_fmha_mla_reduction.hpp
+  sha256: 6b00de9e7b736b6aec6ed9ecb1e084ae57e8c85ca3e39c61549a0746fc2acc81
+- local_path: key-files/examples/77_blackwell_fmha/kernel/sm100_fmha_mla_tma_warpspecialized.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/kernel/sm100_fmha_mla_tma_warpspecialized.hpp
+  sha256: 8bd3fe741c3533c62ed70bc2e883fbdc8ea4cb251e4f43344684077fcd34ae66
+- local_path: key-files/examples/77_blackwell_fmha/kernel/sm100_mla_tile_scheduler.hpp
+  role: upstream-file
+  mode: verbatim
+  upstream_path: examples/77_blackwell_fmha/kernel/sm100_mla_tile_scheduler.hpp
+  sha256: 90db6dd89411128a5866a0c7327a4822eae85c0adbe29953a274b95247228628

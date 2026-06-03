@@ -1,0 +1,21 @@
+slug: simon-nvfp4-gemv
+origin_url: https://veitner.bearblog.dev/nvfp4-gemv/
+code_present: true
+total_blocks: 3
+generated_by: scripts/extract_blog_code.py
+files:
+- local_path: code/01-reference-core-computation-part-1.cpp
+  heading_path: '# NVFP4 GEMV and Improved NVFP4 GEMV (Simon Veitner) > ## Key Code
+    > ### Reference core computation (Part 1)'
+  fence_lang: cpp
+  sha256: 62543aadc50663afba2585ab45910b80ac9ece99ef55fa98bd381a12263f9a89
+- local_path: code/02-strategy-1-k-parallel-grid-with-atomic-accumulation.cpp
+  heading_path: "# NVFP4 GEMV and Improved NVFP4 GEMV (Simon Veitner) > ## Key Code\
+    \ > ### Strategy 1 \u2014 K-parallel grid with atomic accumulation"
+  fence_lang: cpp
+  sha256: 5b5672e3efc0853b283b379164fc9f2ca60c44785d06b701081ccb2f971857ae
+- local_path: code/03-strategy-3-atomic-free-shared-memory-reduction.cpp
+  heading_path: "# NVFP4 GEMV and Improved NVFP4 GEMV (Simon Veitner) > ## Key Code\
+    \ > ### Strategy 3 \u2014 Atomic-free shared-memory reduction"
+  fence_lang: cpp
+  sha256: 457f7cf6bf77eca87f8a3d668e79400451ed325dd1c003133a8c34c8747fba0f

@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-triton-silu-mul-kernel",
+  "name": "Write Triton SiLU-Mul (SwiGLU) Kernel",
+  "category": "inference",
+  "summary": "Implement a Triton kernel for y = silu(a) * b — the SwiGLU activation step in LLaMA-family MLPs — with fp32 sigmoid for numerical stability and tuning for memory bandwidth.",
+  "tags": ["triton", "silu", "swiglu", "geglu", "activation", "fusion", "mlp", "llama", "inference", "gpu-kernels"],
+  "difficulty": "intermediate",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-triton-silu-mul-kernel/SKILL.md"
+}

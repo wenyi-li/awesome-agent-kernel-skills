@@ -1,0 +1,7 @@
+# Python package dependencies for kernel_KBS scripts.
+#
+# SQLite access uses Python's standard-library sqlite3 module. GitHub refresh
+# and verification tools may also require the external `gh` CLI, which is not a
+# pip package and is therefore not listed here.
+
+PyYAML>=6.0

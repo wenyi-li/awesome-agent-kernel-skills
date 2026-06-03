@@ -1,0 +1,18 @@
+slug: colfax-cutlass-blackwell
+origin_url: https://research.colfax-intl.com/cutlass-tutorial-writing-gemm-kernels-using-tmem-for-nvidia-blackwell-gpus/
+code_present: true
+total_blocks: 3
+generated_by: scripts/extract_blog_code.py
+files:
+- local_path: code/01-tmem-allocation-tcgen05-mma-single-thread-launch.cu
+  heading_path: '## Key Code > ### TMEM allocation + tcgen05.mma (single-thread launch)'
+  fence_lang: cuda
+  sha256: 9bccf0c3d9accec3e57003104637cb630b98ec3506da685ad82d3e5914d2b5c0
+- local_path: code/02-tmem-load-into-registers-for-epilogue.cu
+  heading_path: '## Key Code > ### TMEM load into registers for epilogue'
+  fence_lang: cuda
+  sha256: e8e1fe48b0446f0cef12c5b0d9ea26f9475c07a9a6c1cbc8468c4d4e9b8633a9
+- local_path: code/03-cutlass-mma-atom-wrapping.cpp
+  heading_path: '## Key Code > ### CUTLASS MMA_Atom wrapping'
+  fence_lang: cpp
+  sha256: c4df25c288ec79d5b11dd73c626f2bce47b5c9d98ccce1eb24b66a637d782995

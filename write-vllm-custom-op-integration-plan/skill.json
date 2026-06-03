@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-vllm-custom-op-integration-plan",
+  "name": "Write vLLM Custom Op Integration Plan",
+  "category": "inference",
+  "summary": "Plan integration of a custom CUDA or Triton kernel into vLLM — paged KV cache compatibility, CUDA graph capture, tensor parallelism, model-runner hooks, and benchmark strategy.",
+  "tags": ["vllm", "integration", "custom-op", "llm-serving", "paged-attention", "cuda-graphs", "tensor-parallel", "planning", "inference"],
+  "difficulty": "advanced",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "cuda", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-vllm-custom-op-integration-plan/SKILL.md"
+}

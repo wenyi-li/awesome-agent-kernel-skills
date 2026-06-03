@@ -1,0 +1,426 @@
+repo: NVIDIA/cutlass
+searched_at: '2026-04-27'
+keywords_used:
+- blackwell
+- sm100
+- sm_100
+- tcgen05
+- tmem
+- nvfp4
+- fp4
+- mxfp4
+- block_scale
+- 2sm
+- cta_group
+- clc
+- cluster_launch
+- umma
+- persistent
+- warp_special
+- fmha
+- mla
+- epilogue
+- tile_scheduler
+- grouped_gemm
+- sub_byte
+total_candidates: 66
+included: 34
+excluded: 8
+deferred: 24
+prs:
+- number: 2033
+  title: '[EVT] Add support for Row/Col broadcast PtrArray'
+  date: '2025-01-08'
+  decision: include
+  reason: adds Row/Col broadcast PtrArray support for EVT epilogue infrastructure
+  files_changed: []
+- number: 2037
+  title: Groupwise scaling along M for FP8 gemm
+  date: '2025-01-13'
+  decision: include
+  reason: adds groupwise scaling along M for FP8 GEMM kernel epilogue
+  files_changed: []
+- number: 2110
+  title: Treat negative zero as equivalent to positive zero in sm90_sparse_gemm_compressor.hpp
+  date: '2025-02-13'
+  decision: exclude
+  reason: SM90 sparse GEMM compressor fix, not Blackwell-specific
+  files_changed: []
+- number: 2130
+  title: Flash MLA support
+  date: '2025-02-24'
+  decision: include
+  reason: adds Flash MLA attention kernel support
+  files_changed: []
+- number: 2134
+  title: Flash MLA Support - Step 2
+  date: '2025-02-26'
+  decision: include
+  reason: Flash MLA support step 2, continued kernel implementation
+  files_changed: []
+- number: 2139
+  title: Blockwise and Groupwise GEMM for Blackwell and Improvements for Hopper
+  date: '2025-02-26'
+  decision: include
+  reason: adds blockwise and groupwise GEMM kernels for Blackwell SM100
+  files_changed: []
+- number: 2143
+  title: Add Blackwell to the list of architectures in quickstart.md
+  date: '2025-02-28'
+  decision: exclude
+  reason: documentation-only update to quickstart.md
+  files_changed: []
+- number: 2161
+  title: Blockwise Improvement and Programmatic Dependent Launch
+  date: '2025-03-10'
+  decision: include
+  reason: blockwise kernel improvement and programmatic dependent launch for SM100
+  files_changed: []
+- number: 2167
+  title: Fix sm100 gemm wrong static constexpr that breaks compilation on Windows
+  date: '2025-03-13'
+  decision: include
+  reason: fixes SM100 GEMM compilation bug in static constexpr
+  files_changed: []
+- number: 2185
+  title: v3.9
+  date: '2025-03-20'
+  decision: defer
+  reason: v3.9 release PR, likely contains Blackwell kernel changes but scope unclear from title
+  files_changed: []
+- number: 2203
+  title: v3.9 update
+  date: '2025-03-27'
+  decision: defer
+  reason: v3.9 update PR, likely contains kernel changes but scope unclear from title
+  files_changed: []
+- number: 2220
+  title: Set EpiTile correctly when TileN is not divisible by 32
+  date: '2025-04-04'
+  decision: include
+  reason: fixes EpiTile calculation when TileN not divisible by 32, affects SM100 epilogue correctness
+  files_changed: []
+- number: 2267
+  title: war to fix blackwell grouped groupwise hang
+  date: '2025-04-29'
+  decision: include
+  reason: fixes Blackwell grouped groupwise GEMM hang bug
+  files_changed: []
+- number: 2291
+  title: Correct divmod order in example 77 (blackwell fmha)
+  date: '2025-05-13'
+  decision: include
+  reason: fixes divmod order in Blackwell FMHA kernel (example 77)
+  files_changed: []
+- number: 2292
+  title: Handle get_masked_trip_count for small length in fmha example
+  date: '2025-05-13'
+  decision: include
+  reason: fixes masked trip count for small length in Blackwell FMHA kernel
+  files_changed: []
+- number: 2333
+  title: Fix epilogue::thread::Convert cannot be used with DefaultEpilogue
+  date: '2025-05-26'
+  decision: include
+  reason: fixes epilogue::thread::Convert compatibility with DefaultEpilogue
+  files_changed: []
+- number: 2366
+  title: '[ex77] fix mla split; add fwd lse; add bwd varlen'
+  date: '2025-06-04'
+  decision: include
+  reason: fixes MLA split and adds fwd LSE and bwd varlen for FMHA kernel
+  files_changed: []
+- number: 2370
+  title: Revert "[ex77] fix mla split; add fwd lse; add bwd varlen"
+  date: '2025-06-06'
+  decision: exclude
+  reason: 'revert of PR #2366, no net kernel change'
+  files_changed: []
+- number: 2378
+  title: support fp16 accmulator for sm89 fp8 mma
+  date: '2025-06-07'
+  decision: include
+  reason: adds FP16 accumulator support for SM89 FP8 MMA kernel
+  files_changed: []
+- number: 2466
+  title: Example 77 add blackwell fmha bwd for MLA shape
+  date: '2025-07-14'
+  decision: include
+  reason: adds Blackwell FMHA backward kernel for MLA shape
+  files_changed: []
+- number: 2472
+  title: 'Add Blackwell MLA forward (shape: d=192, dv=128) implementation'
+  date: '2025-07-16'
+  decision: include
+  reason: adds Blackwell MLA forward kernel (d=192, dv=128)
+  files_changed: []
+- number: 2480
+  title: Feature/add bottom causal mask
+  date: '2025-07-18'
+  decision: include
+  reason: adds bottom causal mask feature for FMHA kernel
+  files_changed: []
+- number: 2492
+  title: 'fix: examples/cute/tutorial/blackwell/04_mma_tma_2sm_sm100.cu GridDim miscalculated'
+  date: '2025-07-23'
+  decision: include
+  reason: fixes GridDim miscalculation in Blackwell 2SM MMA TMA tutorial kernel
+  files_changed: []
+- number: 2511
+  title: '[Doc fix] incorrect compute cap. for Blackwell RTX'
+  date: '2025-07-27'
+  decision: exclude
+  reason: documentation fix for compute capability numbers
+  files_changed: []
+- number: 2599
+  title: fix gqa issue for blackwell fmha.py
+  date: '2025-08-28'
+  decision: include
+  reason: fixes GQA issue in Blackwell FMHA kernel
+  files_changed: []
+- number: 2639
+  title: doc change for 4.2
+  date: '2025-09-15'
+  decision: exclude
+  reason: documentation change for release 4.2
+  files_changed: []
+- number: 2713
+  title: DistGEMM bug fixes
+  date: '2025-10-22'
+  decision: include
+  reason: DistGEMM bug fixes for Blackwell distributed GEMM
+  files_changed: []
+- number: 2719
+  title: Support PDL for SM90 Array TMA GEMM
+  date: '2025-10-24'
+  decision: include
+  reason: adds PDL (Programmatic Dependent Launch) support for SM90 Array TMA GEMM
+  files_changed: []
+- number: 2746
+  title: Support for GEMM-K=0 for Blackwell Grouped GEMMs
+  date: '2025-11-04'
+  decision: include
+  reason: adds GEMM-K=0 support for Blackwell Grouped GEMMs
+  files_changed: []
+- number: 2750
+  title: Add tutorial fp16_gemm_1
+  date: '2025-11-05'
+  decision: include
+  reason: adds SM100 tcgen05 FP16 GEMM tutorial with CTA group
+  files_changed: []
+- number: 2865
+  title: '[Bug Fix]Bypass launch grids for SM120 Kernel with SM90 Mainloop & SM100 TileScheduler'
+  date: '2025-12-09'
+  decision: include
+  reason: fixes launch grid bypass for SM120 kernel with SM90 mainloop and SM100 TileScheduler
+  files_changed: []
+- number: 2881
+  title: new example with TMA prefetch feature targeting for DRAM latency boun…
+  date: '2025-12-16'
+  decision: include
+  reason: adds TMA prefetch example targeting DRAM latency bound kernels with persistent scheduler
+  files_changed: []
+- number: 2894
+  title: Fix CUDA version checking in examples
+  date: '2025-12-21'
+  decision: exclude
+  reason: build system fix for CUDA version checking, no kernel changes
+  files_changed: []
+- number: 2917
+  title: New RMS Norm example with unit tests
+  date: '2026-01-01'
+  decision: include
+  reason: adds new Blackwell RMS Norm kernel example with unit tests
+  files_changed: []
+- number: 2921
+  title: Fix incorrect tensor layout strides in Blackwell MMA tutorial comments
+  date: '2026-01-03'
+  decision: include
+  reason: fixes tensor layout strides in Blackwell MMA tutorial kernel comments
+  files_changed: []
+- number: 2946
+  title: '[Cutlass profiler] Fix SM100 FP8 nosmem epilogue shape_div “Divisibility Condition” for non‑multiple‑of‑64 N tiles'
+  date: '2026-01-10'
+  decision: include
+  reason: fixes SM100 FP8 nosmem epilogue shape_div for non-multiple-of-64 N tiles
+  files_changed: []
+- number: 2965
+  title: '[Bug Fix]Set NumSplitsM to 1 when TileShapeM < 128 in sm90 fp8 blockwise scaling CollectiveMma'
+  date: '2026-01-19'
+  decision: include
+  reason: fixes NumSplitsM for SM90 FP8 blockwise scaling CollectiveMma kernel
+  files_changed: []
+- number: 2977
+  title: Fix error in Blackwell document of referring to Mxf4 format as NVF4
+  date: '2026-01-23'
+  decision: exclude
+  reason: documentation fix correcting Mxf4/NVF4 format naming
+  files_changed: []
+- number: 2995
+  title: '[CuTeDSL] Fix: SM100 block-scale gemm overlapping accumulator'
+  date: '2026-02-03'
+  decision: include
+  reason: fixes SM100 block-scale GEMM overlapping accumulator in CuTeDSL
+  files_changed: []
+- number: 3021
+  title: '[Cute-DSL] Add option for issue_clc_query without multicast'
+  date: '2026-02-11'
+  decision: include
+  reason: adds CLC query option without multicast for CuTe-DSL
+  files_changed: []
+- number: 3041
+  title: remove mixed_input_fmha_prefill.py
+  date: '2026-02-18'
+  decision: exclude
+  reason: removes deprecated mixed_input_fmha_prefill.py script
+  files_changed: []
+- number: 3091
+  title: '[Hopper CuTeDSL] Add grouped GEMM kernel example'
+  date: '2026-03-06'
+  decision: include
+  reason: adds Hopper CuTeDSL grouped GEMM kernel example with persistent scheduler
+  files_changed: []
+- number: 3106
+  title: '[CLI] add cutedsl fp16 gemm tutorial from 2 to 6'
+  date: '2026-03-13'
+  decision: include
+  reason: adds CuTeDSL FP16 GEMM tutorials 2-6 with CLC and persistent patterns
+  files_changed: []
+- number: 3130
+  title: Update blackwell tutorial to be compatible with 4.5-dev version
+  date: '2026-03-25'
+  decision: include
+  reason: updates Blackwell tutorial kernel code for 4.5-dev compatibility
+  files_changed: []
+- number: 730
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 773
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 828
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 844
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 992
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1189
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1224
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1275
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1302
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1350
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1413
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1526
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1543
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1661
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1713
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1753
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1795
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1796
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1833
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1932
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1993
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 3149
+  title: ''
+  date: '2026-04-25'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []

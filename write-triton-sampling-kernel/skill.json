@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-triton-sampling-kernel",
+  "name": "Write Triton Sampling Kernel",
+  "category": "inference",
+  "summary": "Implement a Triton kernel for LLM decode-time token sampling — temperature, top-k, top-p (nucleus), and multinomial draw, with heterogeneous per-request sampling parameters.",
+  "tags": ["triton", "sampling", "top-k", "top-p", "temperature", "decode", "llm-inference", "inference", "gpu-kernels"],
+  "difficulty": "advanced",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-triton-sampling-kernel/SKILL.md"
+}

@@ -1,0 +1,24 @@
+origin_url: https://github.com/flashinfer-ai/flashinfer/pull/1025
+upstream_repo: flashinfer-ai/flashinfer
+upstream_sha: 890df95b
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-flashinfer-1025
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 7feb3ec11b1550e554f2984bb9829f684293073028889016eb9c2152ab58cd21
+- local_path: key-files/flashinfer/triton/__init__.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/__init__.py
+  sha256: 5076fbf2db8b6b596a66721d87d84badebbd6facf91530fb91d62b2055ccab3c
+- local_path: key-files/flashinfer/triton/format_conversion.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/format_conversion.py
+  sha256: 5e41c1a495a4b523654264c5a74ab17544118f4ba1cc25cc3c0f9e294b6f5fff

@@ -1,0 +1,101 @@
+## Manual curated-update audit for Ampere KBS enrichment.
+## This is state metadata, not a PR-refresh state file. It records a human-
+## approved manual update that edited canonical Markdown and rebuilt SQLite.
+
+audit_id: ampere-enrichment-2026-05-24
+recorded_at: '2026-05-24T07:10:01Z'
+recorded_by: codex
+update_type: manual-curated-enrichment
+human_permission: true
+scope:
+  topic: Ampere SM80/SM86/SM87 optimization experience
+  intent:
+    - Enrich the Ampere wiki with production portability guidance.
+    - Add precise upstream PR evidence for Ampere-specific guardrails.
+    - Correct stale source metadata that incorrectly classified Ampere PRs as sm100.
+state_policy:
+  pr_update_state_changed: false
+  reason: >
+    pr-update-state.yaml is reserved for scripts/update_pr_corpus.py or
+    scripts/kbs.py update-prs refresh runs. This update was a manual curated
+    edit plus SQLite rebuild, so it is recorded as an audit instead of a PR
+    refresh state.
+source_prs_fetched_or_verified:
+  - id: pr-flashinfer-2927
+    repo: flashinfer-ai/flashinfer
+    pr: 2927
+    url: https://github.com/flashinfer-ai/flashinfer/pull/2927
+    merge_sha: ee3ca012e6be1a3361b23e218b649c74a6ee3b98
+    evidence: Ampere mainloop tile_fits_smem shared-memory filtering and autotuner robustness.
+  - id: pr-flashinfer-2928
+    repo: flashinfer-ai/flashinfer
+    pr: 2928
+    url: https://github.com/flashinfer-ai/flashinfer/pull/2928
+    merge_sha: 9c5edf598c49c18a5a17068b9492ab8e79ced262
+    evidence: Clamp enable_pdl on SM < 90 to avoid Hopper-only PDL PTX on Ampere.
+  - id: pr-cutlass-2340
+    repo: NVIDIA/cutlass
+    pr: 2340
+    url: https://github.com/NVIDIA/cutlass/pull/2340
+    merge_sha: 8206e7a0f57a9a057cdd2c3bb4899bd5154a82e1
+    evidence: CuTe DSL Ampere example precompile/JIT hygiene.
+  - id: pr-flashinfer-812
+    repo: flashinfer-ai/flashinfer
+    pr: 812
+    url: https://github.com/flashinfer-ai/flashinfer/pull/812
+    merge_sha: a00165ca16ae3c4b6fb3f1506cbb08949f5f7ea7
+    evidence: A100 MLA template tuning with CTA_TILE_KV and NUM_STAGES.
+  - id: pr-flashinfer-844
+    repo: flashinfer-ai/flashinfer
+    pr: 844
+    url: https://github.com/flashinfer-ai/flashinfer/pull/844
+    merge_sha: 88e3dee17cc64a61eb6b5a45ef79742a5599ef7a
+    evidence: SM80 CuTe MLA decode asymmetric warp-role schedule for register pressure.
+  - id: pr-vllm-38427
+    repo: vllm-project/vllm
+    pr: 38427
+    url: https://github.com/vllm-project/vllm/pull/38427
+    merge_sha: 16a65e41736c5e8d27e9e843668f6e3f99d68d9a
+    evidence: Batch-invariant Triton matmul dispatch widened to all Ampere SM8x devices.
+changed_documents:
+  added:
+    - store/docs/sources/prs/flashinfer/PR-2928.md
+    - store/docs/sources/prs/cutlass/PR-2340.md
+  updated:
+    - store/docs/wiki/techniques/ampere-optimization.md
+    - store/docs/sources/prs/flashinfer/PR-2927.md
+    - store/docs/sources/prs/flashinfer/PR-812.md
+    - store/docs/sources/prs/flashinfer/PR-844.md
+    - store/docs/sources/prs/vllm/PR-38427.md
+sqlite_rebuild:
+  command: python3 scripts/kbs.py build-db --reset
+  manifest: store/indexes/kernel_kbs_manifest.json
+  built_at: '2026-05-24T06:51:48Z'
+  schema_version: 3
+  counts:
+    docs: 2845
+    active_docs: 2845
+    tags: 22648
+    artifacts: 556
+validation:
+  - command: python3 scripts/validate.py
+    result: pass
+    summary: All files valid; 2845 files and 89 asset bundles validated.
+  - command: python3 scripts/kbs.py doctor --json --limit 5
+    result: pass
+    summary: SQLite schema, paths, FTS, and artifacts healthy.
+  - command: python3 scripts/kbs.py query ampere --tag ampere-optimization --limit 12
+    result: pass
+    summary: Query returns the Ampere wiki and added/updated PR evidence, including PR-2927, PR-2928, and PR-2340.
+  - command: python3 scripts/kbs.py query pdl --architecture sm86 --limit 10
+    result: pass
+    summary: Query returns pr-flashinfer-2928 and technique-ampere-optimization.
+  - command: python3 scripts/kbs.py check all
+    result: pass-with-known-warnings
+    summary: >
+      Size and fixtures pass. Freshness warnings remain for CUDA released_at
+      fields marked needs-verification and stale tool-version thresholds.
+notes:
+  - This audit intentionally does not update refresh-cutoff.yaml or refresh-search-results.yaml.
+  - This audit intentionally does not update pr-update-state.yaml.
+  - Full Markdown bodies remain canonical under store/docs; SQLite stores searchable metadata, relationships, excerpts, hashes, and FTS terms.

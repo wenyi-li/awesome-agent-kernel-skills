@@ -1,0 +1,123 @@
+schema_version: 1
+description: >
+  Configuration for refreshing the kernel_KBS PR corpus from GitHub REST API.
+  Repository coverage, keywords, and path filters live here instead of inside
+  the update script. Repositories must point to official upstream organizations,
+  not personal forks.
+defaults:
+  api_base: https://api.github.com
+  token_env: GITHUB_TOKEN
+  since_days: 30
+  max_pages_per_repo: 3
+  per_page: 100
+  sleep_seconds: 1.0
+  include_keywords:
+    - cuda
+    - triton
+    - cute
+    - cutlass
+    - kernel
+    - gemm
+    - attention
+    - mla
+    - moe
+    - fp8
+    - fp4
+    - nvfp4
+    - mxfp4
+    - block_scale
+    - tensor core
+    - tensor_core
+    - tcgen05
+    - tmem
+    - tma
+    - cp.async
+    - ldmatrix
+    - mma
+    - wgmma
+    - sm80
+    - sm90
+    - sm100
+    - blackwell
+    - hopper
+    - ampere
+  include_path_globs:
+    - "*.cu"
+    - "*.cuh"
+    - "*.ptx"
+    - "*.cpp"
+    - "*.cc"
+    - "*.cxx"
+    - "*.h"
+    - "*.hpp"
+    - "*.hxx"
+    - "*.inl"
+    - "*triton*.py"
+    - "*kernel*.py"
+    - "*cute*.py"
+    - "*ops*.py"
+    - "*attention*.py"
+    - "*gemm*.py"
+    - "*moe*.py"
+    - "*mla*.py"
+  exclude_title_regex:
+    - "\\bdocs?\\b"
+    - "\\breadme\\b"
+    - "\\btypo\\b"
+    - "\\bformat\\b"
+    - "\\blint\\b"
+    - "\\bci\\b"
+    - "\\bchore\\b"
+    - "\\brelease note"
+  exclude_path_globs:
+    - "docs/**"
+    - "**/docs/**"
+    - "tests/**"
+    - "**/tests/**"
+    - ".github/**"
+    - "**/.github/**"
+    - "**/README*"
+    - "**/CHANGELOG*"
+repositories:
+  - slug: sglang
+    repo: sgl-project/sglang
+    enabled: true
+  - slug: vllm
+    repo: vllm-project/vllm
+    enabled: true
+  - slug: tensorrt-llm
+    repo: NVIDIA/TensorRT-LLM
+    enabled: true
+  - slug: pytorch
+    repo: pytorch/pytorch
+    enabled: true
+  - slug: flash-attention
+    repo: Dao-AILab/flash-attention
+    enabled: true
+  - slug: flashinfer
+    repo: flashinfer-ai/flashinfer
+    enabled: true
+  - slug: cutlass
+    repo: NVIDIA/cutlass
+    enabled: true
+  - slug: cccl
+    repo: NVIDIA/cccl
+    enabled: true
+  - slug: triton
+    repo: triton-lang/triton
+    enabled: true
+  - slug: deepgemm
+    repo: deepseek-ai/DeepGEMM
+    enabled: true
+  - slug: thunderkittens
+    repo: HazyResearch/ThunderKittens
+    enabled: true
+  - slug: tilelang
+    repo: tile-ai/tilelang
+    enabled: true
+  - slug: quack
+    repo: Dao-AILab/quack
+    enabled: true
+  - slug: tilekernels
+    repo: deepseek-ai/TileKernels
+    enabled: true

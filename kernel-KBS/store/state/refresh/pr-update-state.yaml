@@ -1,0 +1,29 @@
+generated_by: scripts/update_pr_corpus.py
+run_at: '2026-05-23T14:02:17.819020+00:00'
+window:
+  since: '2026-04-27'
+  until: '2026-05-23'
+mode: list
+repos:
+- slug: sglang
+  repo: sgl-project/sglang
+  seen_merged_in_window: 17
+  skipped_existing: 0
+  matched_new: 15
+  written: 15
+  new_ids:
+  - pr-sglang-25925
+  - pr-sglang-26170
+  - pr-sglang-26026
+  - pr-sglang-23292
+  - pr-sglang-26166
+  - pr-sglang-26129
+  - pr-sglang-26134
+  - pr-sglang-26033
+  - pr-sglang-26117
+  - pr-sglang-26116
+  - pr-sglang-24144
+  - pr-sglang-21431
+  - pr-sglang-26152
+  - pr-sglang-25843
+  - pr-sglang-24587

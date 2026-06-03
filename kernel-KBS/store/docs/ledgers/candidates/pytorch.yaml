@@ -1,0 +1,1196 @@
+repo: pytorch/pytorch
+searched_at: '2026-04-27'
+keywords_used:
+- blackwell
+- sm100
+- sm_100
+- nvfp4
+- B200
+- cuda+13
+- tensor_core
+- wgmma
+- tcgen05
+- cute
+- CUTLASS
+- TMA
+- inductor
+- flash_attention
+- sdpa
+- scaled_mm
+- block_scale
+- compute_10
+- launch_bounds
+- mxfp4
+- sm_100a
+- gemm
+- triton+blackwell
+- fp8+kernel
+total_candidates: 194
+included: 80
+excluded: 29
+deferred: 85
+prs:
+- number: 180470
+  title: '[release 2.12] Apply Release only changes to 2.12 branch'
+  date: '2026-04-15'
+  decision: include
+  reason: 'matched: sm100'
+  files_changed: []
+- number: 178009
+  title: '[MPS] fix compiling of SDPA producing nan results'
+  date: '2026-03-20'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 177193
+  title: '[Inductor][MPS] Fix half-precision type mismatches in Metal shader codegen (#176436)'
+  date: '2026-03-11'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 177144
+  title: '[Inductor] Don''t unfuse addmm for bf16/fp16 to avoid precision loss'
+  date: '2026-03-11'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 177142
+  title: fix acc failure for vit_base_patch14_dinov2.lvd142m
+  date: '2026-03-11'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 176783
+  title: '[inductor] Fix Identity comparability and evalf recursion'
+  date: '2026-03-07'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 176410
+  title: '[Inductor] Reject non-contiguous subnode fusion in mix-order reduction.'
+  date: '2026-03-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 176495
+  title: '[inductor] avoid multi-stage for mix-order-red by default (#176228)'
+  date: '2026-03-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 175955
+  title: '[CI] Update inductor CI jobs to CUDA 13.0 (#175826)'
+  date: '2026-02-27'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 175781
+  title: '[CI] Switch vLLM test and benchmark workflows to CUDA 13.0'
+  date: '2026-02-25'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 175766
+  title: '[ROCm] Added CUDA check to test_pattern_matcher'
+  date: '2026-02-25'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 175661
+  title: Bump transformers version to 5.2.0
+  date: '2026-02-24'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 175567
+  title: '[release-only] Remove +ptx from cuda 13.0 builds'
+  date: '2026-02-23'
+  decision: defer
+  reason: 'borderline: refactor/cleanup'
+  files_changed: []
+- number: 175580
+  title: '[MPS] Fix 2-pass SDPA memory corruption by forcing float accumulators'
+  date: '2026-02-23'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 175380
+  title: '[CI] Add CUDA 13 periodic tests'
+  date: '2026-02-19'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 175300
+  title: '[CI] Move CUDA 12.8 GPU tests from per-commit trunk to periodic'
+  date: '2026-02-19'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 175299
+  title: '[benchmark] Skip pytorch_CycleGAN_and_pix2pix from inductor benchmarks'
+  date: '2026-02-19'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 175091
+  title: '[RELEASE 2.11] Release only changes'
+  date: '2026-02-16'
+  decision: include
+  reason: 'matched: B200'
+  files_changed: []
+- number: 175096
+  title: Update inductor expected accuracy files
+  date: '2026-02-16'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 175095
+  title: Revert "[CI] Enable TIMM pretrained model caching on shared HF cache (#174596)"
+  date: '2026-02-16'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 174581
+  title: '[CI] Enable TIMM pretrained model caching on shared HF cache'
+  date: '2026-02-09'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 172577
+  title: '[Graph Partition] Improve support for mutation ops'
+  date: '2026-01-15'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 172261
+  title: Revert "[CI] Add IoU-based accuracy checking for inductor tests segmentation models"
+  date: '2026-01-12'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 172116
+  title: Touch `__init__.py` in `vendored_templates` for CuTeDSL Grouped MM template
+  date: '2026-01-09'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 172063
+  title: '[CI] Add IoU-based accuracy checking for inductor tests segmentation models'
+  date: '2026-01-09'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 172141
+  title: Skip modded_nanogpt model in TorchInductor benchmark
+  date: '2026-01-09'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 171926
+  title: Revert "[Inductor] Fix constants handling for Triton constexpr (triton#8248)"
+  date: '2026-01-07'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 171895
+  title: '[cherry-pick][cuDNN][SDPA] cuDNN SDPA off-by-default for cuDNN versions < 12.9 (#171627)'
+  date: '2026-01-07'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 171816
+  title: '[dynamo] Disable gc after compile by default on free-threaded python'
+  date: '2026-01-06'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 171760
+  title: Bump aiohttp from 3.13.2 to 3.13.3 in /.ci/docker
+  date: '2026-01-06'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 171720
+  title: update doc for tlparse
+  date: '2026-01-05'
+  decision: include
+  reason: 'matched: B200'
+  files_changed: []
+- number: 171497
+  title: '[release/2.10] xpu commit pin update for bug fix cherry-pick'
+  date: '2025-12-30'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 171247
+  title: '[xpu][fix][inductor] fallback bfloat16 atomics to eager'
+  date: '2025-12-24'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 171189
+  title: '[cherry-pick][CUDA] Upgrade cuDNN to 9.15.1 for CUDA 13 builds '
+  date: '2025-12-23'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 171150
+  title: Avoid closing random file handles in Inductor
+  date: '2025-12-23'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 171129
+  title: '[Inductor] Fix constants handling for Triton constexpr (triton#8248)'
+  date: '2025-12-22'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 171140
+  title: '[ROCm] Make grouped GEMM CK opt‑in via env and default to fallback path'
+  date: '2025-12-22'
+  decision: defer
+  reason: 'borderline: config only'
+  files_changed: []
+- number: 170888
+  title: '[dynamo] do not include source hashes in pickle'
+  date: '2025-12-19'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 170884
+  title: '[inductor] Fix cudagraph skip for index_put_ with boolean indices, gr…'
+  date: '2025-12-19'
+  decision: defer
+  reason: 'borderline: CUDA graph infra'
+  files_changed: []
+- number: 170726
+  title: '[cherry-pick] Revert "[Inductor XPU GEMM] Step 1/N: Refactor cutlass configuration. (#160174)"'
+  date: '2025-12-18'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 170724
+  title: '[cherry-pick] Revert "[Inductor] ReLU/GELU(Addmm) fusions (#168157)"'
+  date: '2025-12-18'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 170791
+  title: '[dynamo][DebugMode] make ModTracker a no-op in compiled regions'
+  date: '2025-12-18'
+  decision: defer
+  reason: 'borderline: logging'
+  files_changed: []
+- number: 170555
+  title: '[cherry-pick] Fix vllm issue for flex (#170499)'
+  date: '2025-12-16'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 170588
+  title: Add python3-dev to Dockerfile dependencies
+  date: '2025-12-16'
+  decision: defer
+  reason: 'borderline: build infra'
+  files_changed: []
+- number: 170486
+  title: '[flex_attention] adds support for low precision K/V inputs in compiled mode with GPU'
+  date: '2025-12-16'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 170246
+  title: '[Inductor] ExternKernelBenchmarkRequest best attempt'
+  date: '2025-12-11'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 170190
+  title: '[ROCm] Enable shared memory based pruning for Triton configs'
+  date: '2025-12-11'
+  decision: defer
+  reason: 'borderline: config only'
+  files_changed: []
+- number: 170112
+  title: '[RELEASE 2.10] Release only changes'
+  date: '2025-12-10'
+  decision: include
+  reason: 'matched: sm100'
+  files_changed: []
+- number: 167327
+  title: '[cuDNN][SDPA][Convolution] Expose cuDNN runtime version in CUDA hooks'
+  date: '2025-11-07'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 167121
+  title: '[cuDNN][SDPA] Check-in test for #166211'
+  date: '2025-11-05'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 166994
+  title: '[GraphPartition] cache get_free_symbol_uses (#166338)'
+  date: '2025-11-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 166967
+  title: '[Graph Partition] move custom rules to inductor config (#166458)'
+  date: '2025-11-04'
+  decision: defer
+  reason: 'borderline: config only'
+  files_changed: []
+- number: 166910
+  title: '[inductor] don''t try to reorder loops for template'
+  date: '2025-11-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 167020
+  title: '[Minor][Inductor] move some combo kernel log from warning to debug'
+  date: '2025-11-04'
+  decision: defer
+  reason: 'borderline: logging'
+  files_changed: []
+- number: 166922
+  title: '[Inductor] No longer throw error in bmm out_dtype lowering due to tem…'
+  date: '2025-11-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 166914
+  title: '[dynamo] Revert C++-fying of symbolic shape guards'
+  date: '2025-11-04'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 166913
+  title: '[Dynamo] Don''t guard data ptrs by default with mark_static_address'
+  date: '2025-11-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 166985
+  title: '[Graph Partition] fix graph partition input signature for fallback kernels'
+  date: '2025-11-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 166912
+  title: '[2.9.1][cuDNN][SDPA] bump cuDNN frontend to 1.12 patch release'
+  date: '2025-11-04'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 166017
+  title: Bump uv from 0.8.6 to 0.9.5 in /.ci/lumen_cli
+  date: '2025-10-21'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 164941
+  title: Switch build jobs that use linux.12xlarge to c7i
+  date: '2025-10-08'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 164893
+  title: CUDA 13.0 builds fix on Amazon Linux 2023
+  date: '2025-10-07'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 164761
+  title: Fix type in class definition of bytecodedispatchtable
+  date: '2025-10-06'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 164579
+  title: Pin conda version for Docker builds
+  date: '2025-10-03'
+  decision: defer
+  reason: 'borderline: build infra'
+  files_changed: []
+- number: 164368
+  title: '[Flex attention] Fix flex attention head broadcast'
+  date: '2025-10-01'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 164364
+  title: '[SDPA] [MPS] Fixes regression in 2.8.0 for scaled_dot_product_attention using mps'
+  date: '2025-10-01'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 164236
+  title: '[AARCH64][CD][CUDA13][Triton][PTXAS] Turn on BUILD_BUNDLE_PTXAS=1  '
+  date: '2025-09-30'
+  decision: defer
+  reason: 'borderline: CI/CD adjacent'
+  files_changed: []
+- number: 164172
+  title: Use linux.g4dn.4xlarge.nvidia.gpu for cuda 12.4 legacy driver tests
+  date: '2025-09-29'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 164026
+  title: '[cuDNN][SDPA] Disable dropout for cuDNN SDPA on 9.11 - 9.13'
+  date: '2025-09-27'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 163954
+  title: Move inductor jobs 3.9->3.10
+  date: '2025-09-26'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 163861
+  title: fix pickling for BitwiseFn
+  date: '2025-09-25'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 163766
+  title: '[CD] CUDA 13.0 fix preload logic to include nvidia/cu13/lib/'
+  date: '2025-09-24'
+  decision: defer
+  reason: 'borderline: CI/CD adjacent'
+  files_changed: []
+- number: 163764
+  title: '[Cherry-Pick] [CD] CUDA 13 specific followup changes. Remove sm50-70 From CUDA 12.6 and CUDA 12.8 builds (#162455)'
+  date: '2025-09-24'
+  decision: defer
+  reason: 'borderline: CI/CD adjacent'
+  files_changed: []
+- number: 163633
+  title: CUDA 13.0 Warning update for supported architectures
+  date: '2025-09-23'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 163622
+  title: '[Release 2.9] Update torch-xpu-ops commit pin'
+  date: '2025-09-23'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 163522
+  title: '[CI] Update NVIDIA driver to `580.82.07`'
+  date: '2025-09-22'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 163583
+  title: '[2.9 cherry pick][triton] update 3.5 pin to bbb06c0334a6772b92d24bde54956e675c8c6604 (#163382)'
+  date: '2025-09-22'
+  decision: include
+  reason: 'matched: wgmma'
+  files_changed: []
+- number: 163388
+  title: '[Inductor][Intel GPU] Save `threads_per_warp` from tirton compiled kernel for launching kernel correctly in cpp wrapper.'
+  date: '2025-09-20'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 163395
+  title: '[graph partition] Add way to register custom rule (#163310)'
+  date: '2025-09-20'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 163380
+  title: '[Graph Partition] improve custom op output alias'
+  date: '2025-09-19'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 163265
+  title: '[Release 2.9] [cuDNN][SDPA][submodule] Roll-back cuDNN frontend upgrade, update Met…'
+  date: '2025-09-18'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 163097
+  title: '[Cherry Pick][Graph Partition] allow sharing default device context'
+  date: '2025-09-16'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 162596
+  title: '[CD] Aarch64 Fix packaging ``libarm_compute.so`` and other libraries to the aarch64 CUDA wheels'
+  date: '2025-09-10'
+  decision: defer
+  reason: 'borderline: CI/CD adjacent'
+  files_changed: []
+- number: 162501
+  title: CUDA 13.0 Windows Nvidia Driver Update to 580.88
+  date: '2025-09-09'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 162063
+  title: '[Dependabot] Update(deps): Bump transformers from 4.54.0 to 4.56.0 in /.ci/docker/ci_commit_pins'
+  date: '2025-09-03'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 161816
+  title: '[Reland][Inductor] Prune configs that require more shared memory than the hardware limit'
+  date: '2025-08-29'
+  decision: defer
+  reason: 'borderline: config only'
+  files_changed: []
+- number: 158613
+  title: Setup TorchBench in Docker
+  date: '2025-07-18'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 158646
+  title: '[cherry-pick][inductor][triton] Update HAS_WARP_SPEC to check triton.Config params. Update Triton Hash to top of release/3.4.x stack'
+  date: '2025-07-18'
+  decision: defer
+  reason: 'borderline: config only'
+  files_changed: []
+- number: 158478
+  title: Add warning about removed sm50 and sm60 arches
+  date: '2025-07-16'
+  decision: defer
+  reason: 'borderline: refactor/cleanup'
+  files_changed: []
+- number: 158237
+  title: '[MPS] Switch Cholesky  decomp to column wise'
+  date: '2025-07-14'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 158243
+  title: '[cherry-pick][release 2.8] Update OpenBLAS commit  (#151547)'
+  date: '2025-07-14'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 157754
+  title: Fix einops x torch.compile interaction
+  date: '2025-07-08'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 157752
+  title: '[release] Triton pin update to 3.4'
+  date: '2025-07-08'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 157718
+  title: '[dynamo] do not issue lru_cache warning for functions in the top-level torch namespace'
+  date: '2025-07-07'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 157641
+  title: 'Fix cuda 12.9 aarch64 GPU builds. Update CUDA_STABLE variable. '
+  date: '2025-07-04'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 157560
+  title: '[ez] Disable some failing periodic tests'
+  date: '2025-07-03'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 157454
+  title: '[inductor][user triton] sanitize triple-quoted docstrings in kernel definitions'
+  date: '2025-07-02'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 157515
+  title: '[dynamo] Fix bug in dict(mapping_proxy)'
+  date: '2025-07-02'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 157422
+  title: '[PowerPC] Fixed build issue for vsx vec256 complexfloat and scaled_mm_out_cpu '
+  date: '2025-07-02'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 157308
+  title: '[dynamo] Fix source for lru_cache method'
+  date: '2025-06-30'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 157241
+  title: '[user triton] AOT inductor support for device-side TMA'
+  date: '2025-06-29'
+  decision: include
+  reason: 'matched: TMA'
+  files_changed: []
+- number: 157200
+  title: '[inductor][static launcher] Skip correctness test for test_floats'
+  date: '2025-06-28'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 157105
+  title: '[aarch64] Add back NCCL lib to cuda arm wheel'
+  date: '2025-06-27'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 157137
+  title: '[ONNX] Bump onnxscript api for torch 2.8'
+  date: '2025-06-27'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 156932
+  title: Fix macOS build with `USE_MPS=OFF`
+  date: '2025-06-26'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 156870
+  title: '[dynamo] Ensure fx_graph_runnable scripts run for simple tensor functions'
+  date: '2025-06-25'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 156845
+  title: '[ROCm] Bump AOTriton to 0.10b'
+  date: '2025-06-25'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 156767
+  title: '[cherry-pick] revert #156552'
+  date: '2025-06-24'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 156728
+  title: '[RELEASE 2.8] Release only changes'
+  date: '2025-06-24'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 156757
+  title: '[cherry pick] revert #155412'
+  date: '2025-06-24'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 154409
+  title: '[CI] Remove the xpu env source for linux binary validate'
+  date: '2025-05-27'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 154121
+  title: Fix uint view copy (#151598)
+  date: '2025-05-22'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 154053
+  title: '[Dynamo] Fix einops regression'
+  date: '2025-05-21'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 153750
+  title: Update ExecuTorch pin to latest viable/strict 3/28/2025 (#150308)
+  date: '2025-05-16'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 153648
+  title: Remove 3.13 hack when installing TIMM
+  date: '2025-05-15'
+  decision: defer
+  reason: 'borderline: refactor/cleanup'
+  files_changed: []
+- number: 153641
+  title: '[FlexAttention] explicilty create grad_q w/ strides'
+  date: '2025-05-15'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 153533
+  title: '[dynamo] replace `unimplemented` with `unimplemented_v2` in `variables/functions.py`'
+  date: '2025-05-14'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 153304
+  title: Mark auto_functionalized HOPs as cacheable (#151194)
+  date: '2025-05-10'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 153104
+  title: '[FlexAttention] Remove Old Constraint on lastdim strides'
+  date: '2025-05-07'
+  decision: defer
+  reason: 'borderline: refactor/cleanup'
+  files_changed: []
+- number: 152967
+  title: '[ATen][CUDA] Optimize 128 bit vectorization'
+  date: '2025-05-06'
+  decision: include
+  reason: 'matched: cuda+13'
+  files_changed: []
+- number: 152774
+  title: '[dynamo][super variable] Fix bug to use correct source'
+  date: '2025-05-04'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 152768
+  title: '[cudagraphs] Fix issue in collecting static_input_idxs'
+  date: '2025-05-04'
+  decision: defer
+  reason: 'borderline: CUDA graph infra'
+  files_changed: []
+- number: 152361
+  title: Build libgomp (gcc-13) from src on AArch64
+  date: '2025-04-28'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 151133
+  title: add basic unit tests and noop config
+  date: '2025-04-11'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 150676
+  title: '[CUDA][avgpool2d] Fix backward launch bounds again for `sm100`, `sm120`'
+  date: '2025-04-04'
+  decision: include
+  reason: 'matched: blackwell'
+  files_changed: []
+- number: 150447
+  title: '[inductor] Fix inductor windows linker error'
+  date: '2025-04-01'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 150448
+  title: '[Windows][inductor] fix blank space break windows file path'
+  date: '2025-04-01'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 150389
+  title: Enabling xpu in OffsetBasedRNGTracker .
+  date: '2025-04-01'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 150327
+  title: '[cherry-pick] [CI] Disable some tests that are failing in periodic #150059'
+  date: '2025-03-31'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 150145
+  title: Dont exclude constant_pad_nd in prologue fusion
+  date: '2025-03-27'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 150128
+  title: Revert "Parallelize sort"
+  date: '2025-03-27'
+  decision: exclude
+  reason: non-kernel change
+  files_changed: []
+- number: 149993
+  title: '[inductor][triton 3.3] Fix cpp_wrapper w/ TMA in triton 3.3'
+  date: '2025-03-26'
+  decision: include
+  reason: 'matched: TMA'
+  files_changed: []
+- number: 149871
+  title: Add release branch push triggers to inductor-rocm-mi300.yml
+  date: '2025-03-24'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 149644
+  title: op should NOT be static in aoti_torch_call_dispatcher
+  date: '2025-03-20'
+  decision: defer
+  reason: 'borderline: dispatch/selector (Python-only likely)'
+  files_changed: []
+- number: 149526
+  title: Add release branch push triggers to rocm-mi300.yml
+  date: '2025-03-19'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 149386
+  title: Add AOTI shim for _weight_int4pack_mm_cpu_tensor (#149031)
+  date: '2025-03-18'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 149125
+  title: Remove runtime dependency on packaging
+  date: '2025-03-13'
+  decision: defer
+  reason: 'borderline: refactor/cleanup'
+  files_changed: []
+- number: 149059
+  title: '[inductor] Fix profiler tests with latest Triton'
+  date: '2025-03-12'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 145614
+  title: '[CD] Fix slim-wheel cuda_nvrtc import problem'
+  date: '2025-01-24'
+  decision: defer
+  reason: 'borderline: CI/CD adjacent'
+  files_changed: []
+- number: 144484
+  title: Cleanup gpt_fast benchmark
+  date: '2025-01-09'
+  decision: defer
+  reason: 'borderline: benchmark/test-adjacent'
+  files_changed: []
+- number: 144398
+  title: 'ROCm SDPA: Ensure attn_mask has the same dtype with q'
+  date: '2025-01-08'
+  decision: include
+  reason: 'matched: sdpa'
+  files_changed: []
+- number: 144335
+  title: Fix PythonMod printing
+  date: '2025-01-07'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 144248
+  title: '[inductor][cpu] Fix bmm b_index for dynamic expressions in inductor autotuner'
+  date: '2025-01-06'
+  decision: defer
+  reason: 'borderline: tuning/autotuner infra'
+  files_changed: []
+- number: 144209
+  title: Update torch-xpu-ops commit pin
+  date: '2025-01-05'
+  decision: include
+  reason: 'matched: inductor'
+  files_changed: []
+- number: 36
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 558
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 903
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1290
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 1935
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 2826
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 2893
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 2949
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 3063
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 3725
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 4151
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 4471
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 5048
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 7597
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 37625
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 39283
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 46408
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 53813
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 60731
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 63836
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 65029
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 81753
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 114309
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 114837
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 115667
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 116518
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 116666
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 119003
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 122139
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 122967
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 128539
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 129499
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 130788
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 130854
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 133595
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 135561
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 135869
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 136536
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 136885
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 138587
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180600
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180687
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180690
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180691
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180692
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180815
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180903
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 180934
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 181287
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []
+- number: 181298
+  title: ''
+  date: '2026-04-26'
+  decision: defer
+  reason: from refresh search; needs-triage
+  files_changed: []

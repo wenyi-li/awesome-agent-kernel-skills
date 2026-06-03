@@ -1,0 +1,29 @@
+origin_url: https://github.com/flashinfer-ai/flashinfer/pull/982
+upstream_repo: flashinfer-ai/flashinfer
+upstream_sha: 5751fc68
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-flashinfer-982
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 4fbe5146740a3eca5a25262c155efcce4da545e7986da48cc4ee766276da365b
+- local_path: key-files/flashinfer/triton/__init__.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/__init__.py
+  sha256: 905db8562ab08de70dea898bc06614cfdb126041eb6c4a2c368e455bcbff7348
+- local_path: key-files/flashinfer/triton/kernels/sm_constraint_gemm.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/kernels/sm_constraint_gemm.py
+  sha256: fec317385b5b16f7b75466148f60dee479d5aa0145ea2fd3189906edea6a4e1f
+- local_path: key-files/flashinfer/triton/sm_constraint_gemm.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/sm_constraint_gemm.py
+  sha256: 57c5afe8cf1bb80f71718452aad4f3d5f6147788e345e681c41bfdc0b8a61271

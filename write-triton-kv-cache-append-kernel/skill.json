@@ -1,0 +1,12 @@
+{
+  "id": "inference.write-triton-kv-cache-append-kernel",
+  "name": "Write Triton KV Cache Append Kernel",
+  "category": "inference",
+  "summary": "Implement a Triton kernel that appends new K/V into the KV cache during decode — supports contiguous and paged (vLLM-style) layouts, GQA, and fp8 KV cache scaling.",
+  "tags": ["triton", "kv-cache", "paged-attention", "decode", "vllm", "gqa", "llm-inference", "inference", "gpu-kernels"],
+  "difficulty": "intermediate",
+  "hardware": ["nvidia", "amd"],
+  "languages": ["python", "triton"],
+  "version": "0.1.0",
+  "entry": "skills/inference/write-triton-kv-cache-append-kernel/SKILL.md"
+}

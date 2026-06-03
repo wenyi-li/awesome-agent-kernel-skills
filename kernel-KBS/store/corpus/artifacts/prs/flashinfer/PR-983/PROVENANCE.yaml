@@ -1,0 +1,24 @@
+origin_url: https://github.com/flashinfer-ai/flashinfer/pull/983
+upstream_repo: flashinfer-ai/flashinfer
+upstream_sha: 893172c1
+license: inherits-from-upstream
+retrieved_at: '2026-04-17'
+asset_mode: verbatim
+size_cap_truncated: false
+generated_by: scripts/fetch_pr_diff.py
+source_pr_id: pr-flashinfer-983
+files:
+- local_path: diff.patch
+  role: pr-diff
+  mode: upstream-patch
+  sha256: 938152e47462266a3b7cf5ccbf542d72c292ed8de17ca077b48fce51a825512a
+- local_path: key-files/flashinfer/triton/kernels/norm.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/kernels/norm.py
+  sha256: 3b8fb94ed86a55058528c1a24c8ae4d278ade6e4ccc4340e23ef1c8127fc56b2
+- local_path: key-files/flashinfer/triton/norm.py
+  role: upstream-file
+  mode: verbatim
+  upstream_path: flashinfer/triton/norm.py
+  sha256: d883d8f68b0f684962912ef5d20d2d5a77b82ff8f097cf6502b7c1dd3bbe4421
