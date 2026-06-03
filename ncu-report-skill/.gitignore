@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Compiled harness artifacts (the template compiles to these; don't commit)
+*.o
+*.d
+*.so
+# Don't ignore source .cu files — those are part of the skill
+
+# NCU scratch / profile outputs (users generate their own — never commit)
+*.ncu-rep
+*.ncu-proj
+ncu_home/
