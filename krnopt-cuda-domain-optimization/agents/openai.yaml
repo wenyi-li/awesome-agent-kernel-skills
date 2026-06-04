@@ -1,0 +1,4 @@
+interface:
+  display_name: "CUDA Domain Optimization"
+  short_description: "Domain-specific CUDA kernel optimization"
+  default_prompt: "Use $krnopt-cuda-domain-optimization to choose and plan a domain-specific CUDA kernel optimization."

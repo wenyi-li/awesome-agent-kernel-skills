@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mastery CUDA Coding"
+  short_description: "Author correct, efficient CUDA code with clear structure and good practices"
+  default_prompt: "Use $krnopt-cuda-coding to write or modify CUDA source code, make correctness and ownership explicit, shape memory and reuse well, manage shared-memory and register tradeoffs, and choose dtype or instruction paths deliberately."

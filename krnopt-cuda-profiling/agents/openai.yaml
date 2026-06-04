@@ -1,0 +1,4 @@
+interface:
+  display_name: "Identify CUDA Bottlenecks From Profiling"
+  short_description: "Read CUDA source and profiling evidence to find bottlenecks and attribute them to source"
+  default_prompt: "Use $krnopt-cuda-profiling to inspect CUDA source, analyze nsys or ncu profiling evidence, identify the real bottleneck, and attribute it to the most relevant source regions or source lines when possible."
