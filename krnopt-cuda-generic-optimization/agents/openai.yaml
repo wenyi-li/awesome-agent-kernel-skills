@@ -1,0 +1,4 @@
+interface:
+  display_name: "CUDA Kernel Optimization Direction Hunt"
+  short_description: "Given a diagnosed bottleneck, choose the most justified next CUDA optimization experiment"
+  default_prompt: "Use $krnopt-cuda-generic-optimization after profiling has already identified the hotspot and attributed it to source when needed. Inspect the implicated CUDA source region, choose one bottleneck-matched fix family, and propose one primary optimization experiment plus the signal that would confirm or reject it."

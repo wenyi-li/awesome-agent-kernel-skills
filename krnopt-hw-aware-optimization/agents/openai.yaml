@@ -1,0 +1,4 @@
+interface:
+  display_name: "HW-Aware CUDA Optimization"
+  short_description: "Map target-GPU features to CUDA structure and utilization"
+  default_prompt: "Use $krnopt-hw-aware-optimization to reason about target-GPU features, GPU utilization targets, CUDA kernel structure, and hardware-aware optimization plans."

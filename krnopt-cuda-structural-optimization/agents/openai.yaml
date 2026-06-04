@@ -1,0 +1,4 @@
+interface:
+  display_name: "CUDA Structural Optimization"
+  short_description: "Plan larger CUDA kernel redesigns"
+  default_prompt: "Use $krnopt-cuda-structural-optimization to replan a CUDA kernel or hot path from multiple metrics, workload shape, and source structure, reason across its parts, and choose the right structural redesign family."

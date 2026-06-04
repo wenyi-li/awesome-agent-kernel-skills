@@ -1,0 +1,4 @@
+interface:
+  display_name: "Low-Precision CUDA Kernel Formats"
+  short_description: "Use and interpret low-precision CUDA format contracts"
+  default_prompt: "Use $krnopt-low-precision-kernel-formats to explain a low-precision CUDA format contract, compare FP8 or FP4-family layouts and scales, and decide whether profiling, optimization, hardware-aware reasoning, or source implementation should own the next step."
